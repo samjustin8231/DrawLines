@@ -26,15 +26,18 @@ public class Mission : MonoBehaviour
 
 		/// <summary>
 		/// The wanted or selected Mission.
+		/// 当前选中的mission
 		/// </summary>
 		public static Mission wantedMission;
 
 		/// <summary>
 		/// The color of the mission.
+		/// 当前mission的color
 		/// </summary>
 		public Color missionColor = Color.white;
 
 		/// <summary>
+		/// 该mission的title
 		/// The title of the mission .
 		/// </summary>
 		public string missionTitle = "New Mission";

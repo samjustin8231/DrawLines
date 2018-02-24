@@ -6,6 +6,7 @@ using System;
 public class TableLevel : MonoBehaviour
 {
 		/// <summary>
+		/// 当前选中的level
 		/// The wanted or selected level.
 		/// </summary>
 		public static TableLevel wantedLevel;

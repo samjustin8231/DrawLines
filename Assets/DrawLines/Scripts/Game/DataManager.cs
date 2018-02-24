@@ -131,11 +131,13 @@ public class DataManager : MonoBehaviour
 
 
 		/// <summary>
+		/// 重置游戏
 		/// Reset the game data.
 		/// </summary>
 		public static void ResetData ()
 		{
 				try {
+						//从文件加载missions数据
 						fileMissionsData = LoadMissionsDataFromFile ();
 
 						if (fileMissionsData == null) {
@@ -151,6 +153,7 @@ public class DataManager : MonoBehaviour
 												continue;
 										}
 
+										//该关的数据清空：未解锁，start = 0
 										///UnLock the level of ID equals 1(first level) ,otherwise lock the others
 										if (levelData.ID == 1) {
 												levelData.isLocked = false;
@@ -162,7 +165,7 @@ public class DataManager : MonoBehaviour
 										levelData.starsLevel = TableLevel.StarsNumber.ZERO;
 								}
 						}
-
+						//保存到文件
 						SaveMissionsDataToFile (fileMissionsData);
 				} catch (Exception ex) {
 						Debug.Log (ex.Message);
@@ -304,6 +307,7 @@ public class DataManager : MonoBehaviour
 		}
 
 		/// <summary>
+		/// 从文件中加载missions数据
 		/// Load the missions data from the file.
 		/// </summary>
 		/// <returns>The Missions data.</returns>

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ConfirmDialog : MonoBehaviour
 {
-		public Animator animator;
+		public Animator animator;			//动画
 		public Animator blackAreaAnimator;
 
 		void Start ()
